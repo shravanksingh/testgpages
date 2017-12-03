@@ -1,5 +1,5 @@
 ---
-title: makiing user_id and business_id as nominal
+title: Model
 notebook: Recommendor_System.ipynb
 nav_include: 1
 ---
