@@ -1,3 +1,13 @@
+---
+title: makiing user_id and business_id as nominal
+notebook: Recommendor_System.ipynb
+nav_include: 1
+---
+
+## Contents
+{:.no_toc}
+*  
+{: toc}
 
 ### Loading Library
 
@@ -88,11 +98,11 @@ complete_df.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -261,11 +271,11 @@ restaurant_df.describe()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -365,11 +375,11 @@ user_df.describe()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -577,11 +587,11 @@ review_df.describe()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -672,11 +682,11 @@ review_df.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -740,11 +750,11 @@ user_df.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -1060,11 +1070,11 @@ American_restaurant_rating_df.head()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -1219,11 +1229,11 @@ complete_df.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -1396,22 +1406,18 @@ from surprise import evaluate, print_perf
 #surprise.dataset.Reader(name=None, line_format=u'user item rating', sep=None, rating_scale=(1, 5), skip_lines=0)
 
 reader = Reader(rating_scale=(1, 5))
-# Load the movielens-100k dataset (download it if needed),
-# and split it into 3 folds for cross-validation.
 data = Dataset.load_from_df(baseline_df,reader)
 data.split(n_folds=3)
 
-# We'll use the famous SVD algorithm.
 algo = BaselineOnly()
 
-# Evaluate performances of our algorithm on the dataset.
 perf = evaluate(algo, data, measures=['RMSE', 'MAE'])
 
 print_perf(perf)
 ```
 
     Evaluating RMSE, MAE of algorithm BaselineOnly.
-    
+
     ------------
     Fold 1
     Estimating biases using als...
@@ -1450,22 +1456,18 @@ from surprise import evaluate, print_perf
 #surprise.dataset.Reader(name=None, line_format=u'user item rating', sep=None, rating_scale=(1, 5), skip_lines=0)
 
 reader = Reader(rating_scale=(1, 5))
-# Load the movielens-100k dataset (download it if needed),
-# and split it into 3 folds for cross-validation.
 data = Dataset.load_from_df(baseline_df,reader)
 data.split(n_folds=3)
 
-# We'll use the famous SVD algorithm.
 algo = KNNBaseline()
 
-# Evaluate performances of our algorithm on the dataset.
 perf = evaluate(algo, data, measures=['RMSE', 'MAE'])
 
 print_perf(perf)
 ```
 
     Evaluating RMSE, MAE of algorithm KNNBaseline.
-    
+
     ------------
     Fold 1
     Estimating biases using als...
@@ -1511,11 +1513,11 @@ complete_df.head()
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -1843,11 +1845,11 @@ moviemat[moviemat['-3EqqxYhmi3G0QG1-zPyCg'].notnull()]
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -2612,7 +2614,7 @@ Recommendation Systems by their very nature are very difficult to evaluate, but 
 
 
 ```python
-# makiing user_id and business_id as nominal 
+
 ```
 
 
@@ -2647,11 +2649,11 @@ unique_user_id.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
@@ -2695,11 +2697,11 @@ new_complete_df.head(2)
     .dataframe thead tr:only-child th {
         text-align: right;
     }
-
+    
     .dataframe thead th {
         text-align: left;
     }
-
+    
     .dataframe tbody tr th {
         vertical-align: top;
     }
